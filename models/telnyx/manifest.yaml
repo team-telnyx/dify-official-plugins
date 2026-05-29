@@ -1,6 +1,6 @@
 version: 0.0.1
 type: plugin
-author: "langgenius"
+author: "Telnyx"
 name: "telnyx"
 description:
   en_US: Models provided by Telnyx AI, including chat, embeddings, speech-to-text, and text-to-speech.
@@ -14,9 +14,15 @@ resource:
     model:
       enabled: true
       llm: true
+      text_embedding: true
+      rerank: false
+      tts: true
+      speech2text: true
+      moderation: false
 plugins:
   models:
     - "provider/telnyx.yaml"
+privacy: PRIVACY.md
 meta:
   version: 0.0.1
   arch:
